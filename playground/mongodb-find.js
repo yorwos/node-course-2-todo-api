@@ -23,12 +23,12 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
   // })
 
   db.collection('Users').find({
-    name: 'Yorgos Kopanias'
+    age: 38
   }).toArray().then((docs) => {
     console.log('Users:')
     console.log(JSON.stringify(docs, undefined, 2))
   }, (err) => {
-    console.log('Unable to fetch users named Yorgos Kopanias.')
+    console.log('Unable to fetch users aged 38.')
   })
 
   //db.close()
